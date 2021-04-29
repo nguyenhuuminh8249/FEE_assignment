@@ -1,9 +1,45 @@
 .fl-container {
+    padding: 0% !important;
     display: flex;
     flex-direction: row;
 }
+.none_ {
+    flex: 40%;
+    max-height: 1px;
+
+}
 
 .mid-s {
-    flex: 60%;
+    flex: 20%;
+    height: 250px;
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+    
+}
 
+.flex-form {
+    padding: 10px;
+    border-left:1px solid lightgray;
+    border-right:1px solid lightgray;
+}
+
+input[type=text], input[type=password], input[type=submit] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+input[type=submit] {
+    background-color: limegreen;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+    .fl-container {
+        flex-direction: column;
+    }
 }
