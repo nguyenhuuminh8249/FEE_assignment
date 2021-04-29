@@ -1,0 +1,50 @@
+.flex-form {
+    display: flex;
+    flex-direction: row;
+}
+.label_left {
+    flex: 15%;
+    padding: 5px;
+    margin: 5px;
+}
+.input_right {
+    flex: 25%;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid lightgray;
+}
+.none_ {
+    flex: 60%;
+}
+
+.button_1 {
+    background-color: red;
+    color: white;
+    border: unset;
+    padding: 10px;
+    line-height: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type= text] ,[type = number] {
+    border-radius: 5px;
+}
+
+input[type=submit] {
+    background-color: lightskyblue;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    line-height: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 576px) {
+    .flex-form {
+        flex-direction: column;
+    }
+    
+}

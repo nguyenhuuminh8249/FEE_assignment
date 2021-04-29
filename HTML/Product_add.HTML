@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="..\CSS\general_style.css">
+    <link rel="stylesheet" href="..\CSS\product_add_style.css">
+</head>
+<body>
+    <header>
+        <div class="title_note">
+            <h1>Products</h1>
+            <p>Add products</p>
+        </div>
+        <div class="head_button">
+            <button class="button_1">logout</button>
+        </div>
+    </header>
+    <div class="fl-container">
+        <section>
+            <p style="font-size: 1.5rem;">Add new product </p>
+            <hr style="color: lightgray;">
+        </section>
+        <section >
+            <form action="#" method="POST">
+                <div class="flex-form">
+                    <label for="Product Name" class="label_left">Product Name</label>
+                    <input type="text" name="Product Name" id="Product Name" class="input_right">
+                    <div class="none_"></div>
+                </div>
+                <div class="flex-form">
+                    <label for="Unit Price" class="label_left">Unit Price</label>
+                    <input type="number" name="Unit Price" id="Unit Price" class="input_right">
+                    <div class="none_"></div>
+                </div>    
+                <div class="flex-form">
+                    <label for="Unit In Stock" class="label_left">Unit In Stock</label>
+                    <input type="number" name="Unit In Stock" id="Unit In Stock" value="0" class="input_right">
+                    <div class="none_"></div>
+                </div>
+                <div class="flex-form">
+                    <label for="Description" class="label_left">Description</label>
+                    <textarea name="message" rows="3" id="Description" class="input_right"></textarea>
+                    <div class="none_"></div>
+                </div>
+                <div class="flex-form">
+                    <label for="Manufacturer" class="label_left">Manufacturer</label>
+                    <input type="text" name="Manufacturer" id="Manufacturer" class="input_right">
+                    <div class="none_"></div>
+                </div>
+                <div class="flex-form">
+                    <label for="Category" class="label_left">Category</label>
+                    <input type="text" name="Category" id="Category" class="input_right">
+                    <div class="none_"></div>
+                </div>
+                <div class="flex-form">
+                    <div class="label_left">Condition</div>
+                    <div class="input_right" style="border: unset;">
+                        <input type="radio" name="cond" id="New"><label for="New">New</label>
+                        <input type="radio" name="cond" id="Old"><label for="Old">Old</label>
+                        <input type="radio" name="cond" id="Refurbished"><label for="Refurbished">Refurbished</label>
+                    </div>
+                    <div class="none_"></div>
+                </div>
+                <div class="flex-form">
+                    <label for="Product Image File" class="label_left">Product Image File</label>
+                    <input type="file" name="Product Image File" class="input_right" style="border: unset;">
+                    <div class="none_"></div>
+                </div>
+                <div class="flex-form">
+                    <label for="" class="label_left"></label>
+                    <div class="input_right" style="border: unset;">
+                        <input type="submit" value="Add Product">
+                    </div>
+                    <div class="none_"></div>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
