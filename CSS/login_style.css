@@ -1,12 +1,7 @@
-.fl-container {
-    padding: 0% !important;
-    display: flex;
-    flex-direction: row;
-}
+
 .none_ {
     flex: 40%;
     max-height: 1px;
-
 }
 
 .mid-s {

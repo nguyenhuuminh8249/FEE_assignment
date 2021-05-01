@@ -1,3 +1,12 @@
+.fl-container {
+    display: unset !important;
+    flex-direction: unset !important;
+}
+
+.fl-container > section {
+    padding-left: 8.33%;
+}
+
 .flex-form {
     display: flex;
     flex-direction: row;
