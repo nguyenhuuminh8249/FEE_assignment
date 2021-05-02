@@ -1,1 +1,37 @@
-.
+.fl-container {
+    padding: 8.33%;
+    flex-direction: column !important;
+}
+
+.bu_type1 {
+    background-color: rgb(92, 184, 92);
+    color: white;
+    height: 30px;
+    border: 1px solid rgb(92, 184, 92);
+    border-radius: 5px;
+}
+
+.bu_type2 {
+    background-color: rgb(92, 184, 92);
+    color: white;
+    height: 30px;
+    float: right;
+    border: 1px solid rgb(92, 184, 92);
+    border-radius: 5px;
+}
+
+.bu_type3 {
+    background-color: rgb(217, 83, 79);
+    color: white;
+    height: 30px;
+    border: 1px solid rgb(217, 83, 79);
+    border-radius: 5px;
+}
+
+.bu_top {
+    width: 100%;
+}
+.tab_cart {
+    width: 100%;
+    height: 500px;
+}

@@ -15,3 +15,41 @@ img {
     margin: 10px;
     padding: 20px;
 }
+
+.bu_type1 {
+    background-color: rgb(92, 184, 92);
+    color: white;
+    height: 30px;
+    border: 1px solid rgb(92, 184, 92);
+    border-radius: 5px;
+}
+
+.bu_type2 {
+    background-color: rgb(240, 173, 78);
+    color: white;
+    height: 30px;
+    border: 1px solid rgb(240, 173, 78);
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 992px) {
+    .fl-container {
+        flex-direction: column;
+    }
+    img {
+        height: 250px;
+        object-fit: cover;
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+    .fl-container {
+        flex-direction: column;
+    }
+    img {
+        height: 150px;
+        object-fit: cover;
+    }
+    
+}
