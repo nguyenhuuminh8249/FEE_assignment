@@ -31,8 +31,11 @@ input[type=submit] {
     padding: 15px;
     color: white;
     cursor: pointer;
+    transition-duration: 0.4s;
 }
-
+input[type=submit]:hover {
+    opacity: 0.8;
+}
 @media screen and (max-width: 1024px) {
     .fl-container {
         flex-direction: column;
