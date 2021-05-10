@@ -46,3 +46,10 @@ h1 {
     flex: 16.66%;
 }
 
+button {
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+button:hover{
+    opacity: 0.8;
+}
