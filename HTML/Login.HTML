@@ -6,6 +6,32 @@
     <title>Login</title>
     <link rel="stylesheet" href="..\CSS\general_style.css">
     <link rel="stylesheet" href="..\CSS\login_style.css">
+    <script type="text/javascript">
+        function validation() {
+            if (document.getElementById("Name").value == "")
+            {
+                // alert("please provide your name!");
+                document.getElementById("Name").placeholder = "Enter your name here!";
+                document.getElementById("Name").focus();
+            }
+            else
+            {
+                document.getElementById("Name").placeholder = "";
+            }
+
+            if (document.getElementById("Password").value == "")
+            {
+                // alert("please provide your email!");
+                document.getElementById("Password").placeholder = "Enter your password here!";
+                document.getElementById("Password").focus();
+            }
+            else
+            {
+                document.getElementById("Password").placeholder = "";
+            }
+            return false;
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -18,14 +44,20 @@
     <div class="fl-container">
         <div class="none_"></div>
         <div class="mid-s">
-            <form action="Products_list.HTML" method="POST">
+            <form action="#" method="POST" name="myForm" onsubmit="return validation()">
                 <div class="flex-form" style="text-align: left; background-color: lightgray;">Please sign in</div>
-                <div class="flex-form"><input type="text" placeholder="User Name"></div>
-                <div class="flex-form"><input type="password" placeholder="Password"></div>
+                <div class="flex-form"><input type="text" id="Name" placeholder="User Name"></span></div>
+                <div class="flex-form"><input type="password" id="Password" placeholder="Password"></span></div>
                 <div class="flex-form" style="border-bottom: 1px solid lightgray;"><input type="submit" value="Login"></div>
             </form>
         </div>
         <div class="none_"></div>
+        <!-- <div class="none_ popup_alert">
+            <div class="flex-form" style="border: unset;"><span>&nbsp;</span></div>
+            <div class="flex-form" id="alert_1" style="height: 58px; line-height: 45px; border: unset;"></div>
+            <div class="flex-form" id="alert_2" style="height: 58px; line-height: 45px; border: unset;"></div>
+            <div class="flex-form" style="border: unset;"><span>&nbsp;</span></div>
+        </div> -->
     </div>
 </body>
 </html>

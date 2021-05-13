@@ -13,7 +13,15 @@
     
 }
 
+/* .popup_alert {
+    height: 250px;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: left;
+} */
+
 .flex-form {
+    width: 100%;
     padding: 10px;
     border-left:1px solid lightgray;
     border-right:1px solid lightgray;
@@ -40,6 +48,9 @@ input[type=submit]:hover {
     .fl-container {
         flex-direction: column;
     }
+    /* .flex-form {
+        width: 100%;
+    } */
     h1 {
         font-size: 3rem;
     }
