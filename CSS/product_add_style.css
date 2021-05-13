@@ -52,8 +52,20 @@ input[type=submit] {
 
 
 @media screen and (max-width: 992px) {
+    .fl-container > section {
+        padding-right: 8.33%;
+    }
     .flex-form {
         flex-direction: column;
     }
-    
+    .button_1 {
+        min-width: auto;
+    }
+    .head_button {
+        min-width: auto;
+        background-color: lightgray;
+    }
+    h1 {
+        font-size: 3rem;
+    }
 }

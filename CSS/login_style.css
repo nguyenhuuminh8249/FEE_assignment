@@ -1,11 +1,11 @@
 
 .none_ {
-    flex: 40%;
+    flex: 35%;
     max-height: 1px;
 }
 
 .mid-s {
-    flex: 20%;
+    flex: 30%;
     height: 250px;
     margin-top: 10px;
     padding: 20px;
@@ -36,8 +36,11 @@ input[type=submit] {
 input[type=submit]:hover {
     opacity: 0.8;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
     .fl-container {
         flex-direction: column;
+    }
+    h1 {
+        font-size: 3rem;
     }
 }

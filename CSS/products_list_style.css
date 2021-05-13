@@ -26,17 +26,7 @@ img {
     height: 100px; 
     object-fit: cover;
 }
-@media screen and (max-width: 992px) {
-    .fl-container_sub {
-        flex-direction: column;
-        margin: 10px;
-        padding: 5px;
-    }
-    .p-cards {
-        width: 100%;
-        border-radius: 5px;
-    }
-}
+
 button {
     height: 30px;
     text-align: center;
@@ -52,8 +42,33 @@ button {
     color: white;
 }
 
+@media screen and (max-width: 992px) {
+    .fl-container_sub {
+        flex-direction: column;
+        margin: 10px;
+        padding: 5px;
+    }
+    .p-cards {
+        width: 90%;
+        border-radius: 5px;
+    }
+}
+
 @media screen and (max-width: 576px) {
     .fl-container {
         flex-direction: column;
+    }
+
+    .p-cards {
+        width: 90%;
+        border-radius: 5px;
+    }
+    .head_button {
+        min-width: auto;
+        background-color: lightgray;
+    }
+    
+    h1 {
+        font-size: 3rem;
     }
 }

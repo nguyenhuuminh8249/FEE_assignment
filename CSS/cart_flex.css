@@ -81,6 +81,9 @@
         text-align: center;
         padding: unset;
     }
+    h1 {
+        font-size: 3rem;
+    }
 }
 
 @media screen and (max-width: 320px) {

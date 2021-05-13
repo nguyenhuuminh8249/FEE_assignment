@@ -44,6 +44,7 @@ h1 {
     text-align: center;
     line-height: 150px;
     flex: 16.66%;
+    padding: 10px;
 }
 
 button {
