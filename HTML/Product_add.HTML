@@ -6,8 +6,62 @@
     <title>Add Product</title>
     <link rel="stylesheet" href="..\CSS\general_style.css">
     <link rel="stylesheet" href="..\CSS\product_add_style.css">
+    <script>
+        // validation form check
+        function validation() {
+            //  Product name check
+            if (document.getElementById("Product Name").value == "")
+            {
+                
+                document.getElementById("Product Name").placeholder = "Enter product name here (i.e., iphone).";
+                document.getElementById("Product Name").focus();
+            }
+            else
+            {
+                document.getElementById("Product Name").placeholder = "";
+            }
+            // Unit price check
+            if (document.getElementById("Unit Price").value == "")
+            {
+                document.getElementById("Unit Price").placeholder = "Enter product price here (i.e., 1000).";
+                document.getElementById("Unit Price").focus();
+            }
+            else
+            {
+                document.getElementById("Unit Price").placeholder = "";
+            }
+            // Condition (input: radio type) check
+            var product_stt = document.getElementsByTagName("cond");
+            var init = false;
+            var i = 0;
+            while (!init && i < product_stt.length) {
+                if (product_stt[i].checked) {
+                    init = true;
+                }
+                i++;        
+            }
+            if (!init) {
+                document.getElementById("alert_radio").innerHTML = "*Choose Product condition";
+            }
+            else
+            {
+                document.getElementById("alert_radio").innerHTML = "";
+            }
+            // Manufacturer check
+            if (document.getElementById("Manufacturer").value == "")
+            {
+                document.getElementById("Manufacturer").placeholder = "Enter manufacturer here.";
+                document.getElementById("Manufacturer").focus();
+            }
+            else
+            {
+                document.getElementById("Manufacturer").placeholder = "";
+            }
+            return false;
+        }
+    </script>
 </head>
-<body>
+<body onload="loadCategory()">
     <header>
         <div class="title_note">
             <h1>Products</h1>
@@ -23,7 +77,7 @@
             <hr style="color: lightgray;">
         </section>
         <section >
-            <form action="#" method="POST">
+            <form action="#" method="GET" name="addp_Form" onsubmit="return validation()">
                 <div class="flex-form">
                     <label for="Product Name" class="label_left">Product Name</label>
                     <input type="text" name="Product Name" id="Product Name" class="input_right">
@@ -41,7 +95,7 @@
                 </div>
                 <div class="flex-form">
                     <label for="Description" class="label_left">Description</label>
-                    <textarea name="message" rows="3" id="Description" class="input_right"></textarea>
+                    <textarea name="message" rows="3" id="Description" class="input_right" placeholder="Write description of product here..."></textarea>
                     <div class="none_"></div>
                 </div>
                 <div class="flex-form">
@@ -51,7 +105,7 @@
                 </div>
                 <div class="flex-form">
                     <label for="Category" class="label_left">Category</label>
-                    <input type="text" name="Category" id="Category" class="input_right">
+                    <select name="Category" id="Category" class="input_right"></select>
                     <div class="none_"></div>
                 </div>
                 <div class="flex-form">
@@ -60,6 +114,7 @@
                         <input type="radio" name="cond" id="New"><label for="New">New</label>
                         <input type="radio" name="cond" id="Old"><label for="Old">Old</label>
                         <input type="radio" name="cond" id="Refurbished"><label for="Refurbished">Refurbished</label>
+                        <p id="alert_radio" style="color: red;"></p>
                     </div>
                     <div class="none_"></div>
                 </div>
@@ -78,5 +133,16 @@
             </form>
         </section>
     </div>
+    <script>
+        function loadCategory() {
+            var select = document.getElementById("Category");
+            var listCategory = new Array('Select product category','Apple', 'Samsung', 'Huawei', 'Oppo', 'Xiaomi');
+            var value_code = new Array("-1", "1", "2", "3", "4", "5");
+            for (index in listCategory)
+            {   
+                select.options[select.options.length] = new Option(listCategory[index],value_code[index]);
+            }
+        }
+    </script>
 </body>
 </html>
