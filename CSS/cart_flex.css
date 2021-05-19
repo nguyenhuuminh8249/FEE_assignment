@@ -1,8 +1,10 @@
+/* override general setting for fl-container class */
 .fl-container {
     padding: 8.33%;
     flex-direction: column !important;
 }
 
+/* general setting for flex-table in cart page */
 .info {
     display: flex;
     flex-direction: row;
@@ -14,6 +16,7 @@
     padding: 10px;
 
 }
+/* define width for each column in flex-table */
 .info div:nth-of-type(1) {flex: 3;}
 .info div:nth-of-type(2) {flex: 1;}
 .info div:nth-of-type(3) {flex: 1;}
@@ -23,6 +26,8 @@
 /* .title_tab {
     width: 400% !important;
 } */
+
+/* style setting for button in cart page */
 .bu_type1 {
     background-color: rgb(92, 184, 92);
     color: white;
@@ -66,7 +71,7 @@
     width: 100%;
 }
 
-
+/* Specify style setting for responsive with screen less than 768px */
 @media screen and (max-width: 576px) {
     .info > div {
         min-width: auto;
@@ -85,7 +90,7 @@
         font-size: 3rem;
     }
 }
-
+/* Specify style setting for responsive with screen less than 320px */
 @media screen and (max-width: 320px) {
     .info > div {
         min-width: auto;

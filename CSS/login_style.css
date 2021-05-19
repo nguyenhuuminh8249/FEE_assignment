@@ -1,9 +1,10 @@
-
+/* setting style for empty sections */
 .none_ {
     flex: 35%;
     max-height: 1px;
 }
 
+/* setting style for section contains content */
 .mid-s {
     flex: 30%;
     height: 250px;
@@ -20,6 +21,7 @@
     text-align: left;
 } */
 
+/* style for form and some elements */
 .flex-form {
     width: 100%;
     padding: 10px;
@@ -44,6 +46,8 @@ input[type=submit] {
 input[type=submit]:hover {
     opacity: 0.8;
 }
+
+/* Respoonsive for screen less than 768px */
 @media screen and (max-width: 768px) {
     .fl-container {
         flex-direction: column;

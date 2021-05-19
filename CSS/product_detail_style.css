@@ -1,9 +1,10 @@
-
+/* setting style for image in product detail page */
 img {
     height: 500px;
     object-fit: cover;
 }
 
+/* setting for two column of flexbox: left and right side */
 .left-s {
     flex: 50%;
     margin: 10px;
@@ -16,6 +17,7 @@ img {
     padding: 20px;
 }
 
+/* button style */
 .bu_type1 {
     background-color: rgb(92, 184, 92);
     color: white;
@@ -37,6 +39,7 @@ img {
     padding: 5px;
 }
 
+/* responsive for screen less than 992px */
 @media screen and (max-width: 992px) {
     .fl-container {
         flex-direction: column;
@@ -48,10 +51,12 @@ img {
     
 }
 
+/* responsive for screen less than 576px */
 @media screen and (max-width: 576px) {
     .fl-container {
         flex-direction: column;
     }
+
     img {
         height: 150px;
         object-fit: cover;

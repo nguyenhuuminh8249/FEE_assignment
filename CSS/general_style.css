@@ -1,13 +1,14 @@
 * {
     box-sizing: border-box;
 }
+
+/* set flexbox for general class: fl-container  */
 .fl-container {
     width: 100%;
     display: flex;
     flex-direction: row;
-
 }
-/* grid to design
+/* reference grid to design
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -21,7 +22,7 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 */
-
+/* general setting for <header> */
 header {
     width: 100%;
     height: 250px;
@@ -30,11 +31,12 @@ header {
     font-size: 1.5rem;
     background-color: lightgray;
 }
-
+/* font-size setting for heading */
 h1 {
     font-size: 4rem;
 }
 
+/* general setting for 2 classes of header: title_note and head_button  */
 .title_note {
     padding-top: 30px;
     padding-left: 8.33%;
@@ -47,6 +49,7 @@ h1 {
     padding: 10px;
 }
 
+/* general setting for button effect */
 button {
     cursor: pointer;
     transition-duration: 0.4s;
