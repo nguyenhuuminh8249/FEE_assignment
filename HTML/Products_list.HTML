@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="..\CSS\general_style.css">
     <link rel="stylesheet" href="..\CSS\products_list_style.css">
+    <script src="..\Javascript\productlist.js"></script>
 </head>
 <body>
     <header>
@@ -16,7 +17,7 @@
             <p>All the available products in our store</p>
         </div>
         <div class="head_button">
-            <a href="..\HTML\Cart_flex.html"><button><i class="fa fa-shopping-cart"></i> View Cart</button></a>
+            <a href="..\HTML\Cart_flex.html"><button id="cart_btn"><i class="fa fa-shopping-cart"></i> <span id="cart_btn_update">View Cart</span></button></a>
         </div>
     </header>
     <div class="fl-container">
@@ -28,7 +29,7 @@
                 <p>899 USD</p>
                 <p>600 units instock</p>
                 <a href="..\HTML\details page\p20_pro.html"><button class="info_bu"><i class="fa fa-info-circle"></i> Details</button></a>
-                <button class="ord_bu"><i class="fa fa-shopping-cart"></i> Order Now</button>
+                <button class="ord_bu" onclick="countclick()"><i class="fa fa-shopping-cart"></i> Order Now</button>
             </div>
             <div class="p-cards">
                 <h3>iPhone 8 Plus 64GB <br> PRODUCT RED</h3>
@@ -37,7 +38,7 @@
                 <p>1009 USD</p>
                 <p>250 units in stock</p>
                 <a href="..\HTML\details page\iphone_8.html"><button class="info_bu"><i class="fa fa-info-circle"></i> Details</button></a>
-                <button class="ord_bu"><i class="fa fa-shopping-cart"></i> Order Now</button>
+                <button class="ord_bu" onclick="countclick()"><i class="fa fa-shopping-cart"></i> Order Now</button>
             </div>
         </div>
         <div class="fl-container_sub">
@@ -48,7 +49,7 @@
                 <p>1099 USD</p>
                 <p>800 units in stock</p>
                 <a href="..\HTML\details page\iphone_X.html"><button class="info_bu"><i class="fa fa-info-circle"></i> Details</button></a>
-                <button class="ord_bu"><i class="fa fa-shopping-cart"></i> Order Now</button>
+                <button class="ord_bu" onclick="countclick()"><i class="fa fa-shopping-cart"></i> Order Now</button>
             </div>
             <div class="p-cards">
                 <h3>Galaxy S8 <br> &nbsp;</h3>
@@ -57,7 +58,7 @@
                 <p>699 USD</p>
                 <p>200 units in stock</p>
                 <a href="..\HTML\details page\galaxy_S8.html"><button class="info_bu"><i class="fa fa-info-circle"></i> Details</button></a>
-                <button class="ord_bu"><i class="fa fa-shopping-cart"></i> Order Now</button>
+                <button class="ord_bu" onclick="countclick()"><i class="fa fa-shopping-cart"></i> Order Now</button>
             </div>
         </div>
     </div>

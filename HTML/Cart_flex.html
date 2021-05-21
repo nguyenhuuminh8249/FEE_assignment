@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="..\CSS\general_style.css">
     <link rel="stylesheet" href="..\CSS\cart_flex.css">
+    <script src="..\Javascript\cart_flex.js"></script>
 </head>
 <body>
     <header>
@@ -16,43 +17,43 @@
         </div>
         <div></div>
     </header>
-    <form action="" method="POST">
+    <div>
         <div class="fl-container">
             <div class="top_bu">
-                <button class="bu_type3"><i class="fa fa-close"></i> Clear Cart</button>
+                <button class="bu_type3" onclick="clear_all()"><i class="fa fa-close"></i> Clear Cart</button>
                 <button class="bu_type2"><i class="fa fa-shopping-cart"></i> Check Out</button>
             </div>
-            <div class="table_flex">
-                <div class="left_s">
-                    <div class="info">
-                        <div class="title_tab">Product</div>
+            <div id="table_flex">
+                <div id="left_s">
+                    <div class="info" >
+                        <div>Product</div>
                         <div>Quantity</div>
                         <div>Unit Price</div>
                         <div>Price</div>
                         <div>Action</div>
                     </div>
                 </div>
-                <div class="right_s">
-                    <div class="info">
+                <div id="right_s">
+                    <div class="info" id="p1">
                         <div class="title_tab">Iphone X</div>
                         <div>1</div>
                         <div>1099</div>
                         <div>1099</div>
-                        <div class="clear_act"><button class="Rev_type_bu"><i class="fa fa-remove"></i> Remove</button></div>
+                        <div class="clear_act"><button class="Rev_type_bu" onclick="clear_part('1')"><i class="fa fa-remove"></i> Remove</button></div>
                     </div>
-                    <div class="info">
+                    <div class="info" id="p2">
                         <div class="title_tab">Iphone 8 Plus 64Gb PRODUCT RED</div>
                         <div>1</div>
                         <div>1009</div>
                         <div>1009</div>
-                        <div class="clear_act"><button class="Rev_type_bu"><i class="fa fa-remove"></i> Remove</button></div>
+                        <div class="clear_act"><button class="Rev_type_bu" onclick="clear_part('2')"><i class="fa fa-remove"></i> Remove</button></div>
                     </div>
-                    <div class="info">
+                    <div class="info" id="p3">
                         <div class="title_tab">Galaxy S8</div>
                         <div>1</div>
                         <div>699</div>
                         <div>699</div>
-                        <div class="clear_act"><button class="Rev_type_bu"><i class="fa fa-remove"></i> Remove</button></div>
+                        <div class="clear_act"><button class="Rev_type_bu" onclick="clear_part('3')"><i class="fa fa-remove"></i> Remove</button></div>
                     </div>
                     <div class="info">
                         <div class="title_tab"></div>
@@ -66,6 +67,6 @@
             <div class="bot_bu">
                 <a href="..\HTML\Products_list.html"><button class="bu_type1"><i class="fa fa-arrow-circle-left"></i> Continue Shopping</button></a>
             </div>
-    </form>         
+    <div>         
 </body>
 </html>

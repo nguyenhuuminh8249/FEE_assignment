@@ -7,19 +7,19 @@
 /* setting style for section contains content */
 .mid-s {
     flex: 30%;
-    height: 250px;
+    height: auto;
     margin-top: 10px;
     padding: 20px;
     text-align: center;
     
 }
 
-/* .popup_alert {
-    height: 250px;
-    margin-top: 10px;
-    padding-top: 10px;
+.error {
+    padding-left: 10px;
     text-align: left;
-} */
+    font-size: small;
+    color: red;
+}
 
 /* style for form and some elements */
 .flex-form {

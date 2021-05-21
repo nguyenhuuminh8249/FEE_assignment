@@ -6,69 +6,19 @@
     <title>Add Product</title>
     <link rel="stylesheet" href="..\CSS\general_style.css">
     <link rel="stylesheet" href="..\CSS\product_add_style.css">
+    <script src="..\Javascript\addproduct_valid.js"></script>
     <script>
-        // validation form check
-        function validation() {
-            //  Product name check
-            if (document.getElementById("Product Name").value == "")
-            {
-                
-                document.getElementById("Product Name").placeholder = "Enter product name here (i.e., iphone).";
-                document.getElementById("Product Name").focus();
-            }
-            else
-            {
-                document.getElementById("Product Name").placeholder = "";
-            }
-            // Unit price check
-            if (document.getElementById("Unit Price").value == "")
-            {
-                document.getElementById("Unit Price").placeholder = "Enter product price here (i.e., 1000).";
-                document.getElementById("Unit Price").focus();
-            }
-            else
-            {
-                document.getElementById("Unit Price").placeholder = "";
-            }
-            // Condition (input: radio type) check
-            var product_stt = document.getElementsByTagName("cond");
-            var init = false;
-            var i = 0;
-            while (!init && i < product_stt.length) {
-                if (product_stt[i].checked) {
-                    init = true;
-                }
-                i++;        
-            }
-            if (!init) {
-                document.getElementById("alert_radio").innerHTML = "*Choose Product condition";
-            }
-            else
-            {
-                document.getElementById("alert_radio").innerHTML = "";
-            }
-            // Manufacturer check
-            if (document.getElementById("Manufacturer").value == "")
-            {
-                document.getElementById("Manufacturer").placeholder = "Enter manufacturer here.";
-                document.getElementById("Manufacturer").focus();
-            }
-            else
-            {
-                document.getElementById("Manufacturer").placeholder = "";
-            }
-            return false;
-        }
+
     </script>
 </head>
-<body onload="loadCategory()">
+<body>
     <header>
         <div class="title_note">
             <h1>Products</h1>
             <p>Add products</p>
         </div>
         <div class="head_button">
-            <a href="Login.HTML"><button class="button_1">logout</button></a>
+            <a href="Login.HTML"><button class="button_1" id="logout_btn" onclick="return confirm('Are you sure?')">logout</button></a>
         </div>
     </header>
     <div class="fl-container">
@@ -80,52 +30,74 @@
             <form action="#" method="GET" name="addp_Form" onsubmit="return validation()">
                 <div class="flex-form">
                     <label for="Product Name" class="label_left">Product Name</label>
-                    <input type="text" name="Product Name" id="Product Name" class="input_right">
+                    <div class="input_right">
+                        <input type="text" name="Product Name" id="Product Name">
+                        <span id="alert_productname" class="error"></span>
+                    </div>
                     <div class="none_"></div>
                 </div>
                 <div class="flex-form">
                     <label for="Unit Price" class="label_left">Unit Price</label>
-                    <input type="number" name="Unit Price" id="Unit Price" class="input_right">
+                    <div class="input_right">
+                        <input type="number" name="Unit Price" id="Unit Price">
+                        <span id="alert_unitprice" class="error"></span>
+                    </div>
+                    
                     <div class="none_"></div>
                 </div>    
                 <div class="flex-form">
                     <label for="Unit In Stock" class="label_left">Unit In Stock</label>
-                    <input type="number" name="Unit In Stock" id="Unit In Stock" value="0" class="input_right">
+                    <div class="input_right">
+                        <input type="number" name="Unit In Stock" id="Unit In Stock" value="1" min="1">
+                        <span id="alert_UiS" class="error"></span>
+                    </div>
                     <div class="none_"></div>
                 </div>
                 <div class="flex-form">
                     <label for="Description" class="label_left">Description</label>
-                    <textarea name="message" rows="3" id="Description" class="input_right" placeholder="Write description of product here..."></textarea>
+                    <div class="input_right">
+                        <textarea name="message" rows="3" id="Description" placeholder="Write description of product here..."></textarea>
+                        <span id="alert_des" class="error"></span>
+                    </div>
                     <div class="none_"></div>
                 </div>
                 <div class="flex-form">
                     <label for="Manufacturer" class="label_left">Manufacturer</label>
-                    <input type="text" name="Manufacturer" id="Manufacturer" class="input_right">
+                    <div class="input_right">
+                        <input type="text" name="Manufacturer" id="Manufacturer">
+                        <span id="alert_manu" class="error"></span>
+                    </div>
                     <div class="none_"></div>
                 </div>
                 <div class="flex-form">
                     <label for="Category" class="label_left">Category</label>
-                    <select name="Category" id="Category" class="input_right"></select>
+                    <div class="input_right">
+                        <input type="text" name="Category" id="Category">
+                        <span id="alert_category" class="error"></span>
+                    </div>
                     <div class="none_"></div>
                 </div>
                 <div class="flex-form">
                     <div class="label_left">Condition</div>
-                    <div class="input_right" style="border: unset;">
+                    <div class="input_right">
                         <input type="radio" name="cond" id="New"><label for="New">New</label>
                         <input type="radio" name="cond" id="Old"><label for="Old">Old</label>
                         <input type="radio" name="cond" id="Refurbished"><label for="Refurbished">Refurbished</label>
-                        <p id="alert_radio" style="color: red;"></p>
+                        <p id="alert_radio" class="error"></p>
                     </div>
                     <div class="none_"></div>
                 </div>
                 <div class="flex-form">
                     <label for="Product Image File" class="label_left">Product Image File</label>
-                    <input type="file" name="Product Image File" class="input_right" style="border: unset;">
+                    <div class="input_right">
+                        <input type="file" name="Product Image" id="Product Image">
+                        <p id="alert_image" class="error"></p>
+                    </div>
                     <div class="none_"></div>
                 </div>
                 <div class="flex-form">
                     <label for="" class="label_left"></label>
-                    <div class="input_right" style="border: unset;">
+                    <div class="input_right">
                         <input type="submit" value="Add Product">
                     </div>
                     <div class="none_"></div>
@@ -133,16 +105,5 @@
             </form>
         </section>
     </div>
-    <script>
-        function loadCategory() {
-            var select = document.getElementById("Category");
-            var listCategory = new Array('Select product category','Apple', 'Samsung', 'Huawei', 'Oppo', 'Xiaomi');
-            var value_code = new Array("-1", "1", "2", "3", "4", "5");
-            for (index in listCategory)
-            {   
-                select.options[select.options.length] = new Option(listCategory[index],value_code[index]);
-            }
-        }
-    </script>
 </body>
 </html>

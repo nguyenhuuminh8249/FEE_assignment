@@ -17,11 +17,17 @@
     padding: 5px;
     margin: 5px;
 }
+
 .input_right {
-    flex: 25%;
+    flex: 20%;
     padding: 5px;
     margin: 5px;
-    border: 1px solid lightgray;
+}
+.error {
+    font-size: small;
+    color: red;
+    padding-left: 5px;
+    min-width: auto;
 }
 .none_ {
     flex: 60%;
@@ -37,7 +43,18 @@
     cursor: pointer;
 }
 
-input[type= text] ,[type = number] {
+input[type= text], [type = number] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+textarea {
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid gray;
     border-radius: 5px;
 }
 

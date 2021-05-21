@@ -5,6 +5,7 @@
 /* set flexbox for general class: fl-container  */
 .fl-container {
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
 }
